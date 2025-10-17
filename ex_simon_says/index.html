@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Game (Simon says)</title>
+
+  <style>
+    .d-none {
+      display: none;
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+  <p id="user-message">Remember the number you have 30seconds</p>
+  <p id="numbers"></p>
+
+  <div id="form-container" class="d-none">
+    <div class="alert">
+      There are errors in the form, try again
+    </div>
+    <form action="">
+      <div>
+        <input type="text" placeholder="type a number here" required>
+      </div>
+      <div>
+        <input type="text" placeholder="type a number here" required>
+      </div>
+      <div>
+        <input type="text" placeholder="type a number here" required>
+      </div>
+      <div>
+        <input type="text" placeholder="type a number here" required>
+      </div>
+      <div>
+        <input type="text" placeholder="type a number here" required>
+      </div>
+
+      <div>
+        <button type="submit">
+          Sumbit
+        </button>
+      </div>
+    </form>
+  </div>
+
+
+  <p id="result"></p>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
