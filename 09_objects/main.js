@@ -103,8 +103,8 @@ console.log(classes[0]); //['Fabio', 'Mario', 'Luigi'],
 console.log(classes[1]); //['Emanuele', 'Giorgio', 'Luigi']
 
 // Access nested array items
-console.log(classes[0][2]); //['Fabio', 'Mario', 'Luigi'],
-console.log(classes[1][1]); //['Emanuele', 'Giorgio', 'Luigi']
+console.log(classes[0][2]); // Luigi
+console.log(classes[1][1]); // Giorgio
 
 // Arrays of objects
 const movies = [
@@ -113,7 +113,10 @@ const movies = [
     name: 'Star Wars: A New Hope',
     duration: 121,
     cast: ['Mark Hamill', 'Harrison Ford', 'Carrie Fisher', 'Alec Guinness'],
-    director: 'George Lucas'
+    director: {
+      name: 'George',
+      lastName: 'Lucas'
+    }
   },
   {
     id: 2,
@@ -155,11 +158,46 @@ const movies = [
 console.log(movies[0]);
 console.log(movies[0].name);
 
+const rowEl = document.querySelector('.row')
+
 for (let i = 0; i < movies.length; i++) {
   const thisMovie = movies[i];
-  
+
   console.log(thisMovie)
+  console.log(thisMovie['name']);
+  console.log(thisMovie.name);
+
+  const markup = `
+    <div class="col">
+      <div class="card h-100">
+        <h3>${thisMovie.name}</h3>
+      </div>
+    </div>`
+
+  rowEl.insertAdjacentHTML('beforeend', markup)
 
 }
 
 // complex nested object
+const movie = {
+  id: 1,
+  name: 'Star Wars: A New Hope',
+  duration: 121,
+  cast: ['Mark Hamill', 'Harrison Ford', 'Carrie Fisher', 'Alec Guinness'],
+  director: {
+    name: 'George',
+    lastName: 'Lucas'
+  }
+}
+console.log(movie);
+
+
+// Access the complex object data
+console.log(movie); // object
+console.log(movie.cast); // nested array
+console.log(movie.cast[1]); //'Harrison Ford'
+
+console.log(movie.director); // nested object
+console.log(movie.director.name); // nested object
+
+
