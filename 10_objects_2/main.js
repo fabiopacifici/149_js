@@ -152,7 +152,6 @@ function multiLog(...params){
 multiLog('Ciao', 1, { name: 'mario' }, [1, 2, 4])
 
 
-
 function makeMarkup(element, ...classes){
   console.log(element);
   console.log(classes);
